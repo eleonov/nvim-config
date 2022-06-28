@@ -26,11 +26,15 @@ Plug 'https://github.com/hashivim/vim-terraform'
 Plug 'https://github.com/tpope/vim-dotenv'
 Plug 'https://github.com/vim-syntastic/syntastic'
 Plug 'https://github.com/towolf/vim-helm'
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 
 
 call plug#end()
 
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden = 1
+let g:NERDTreeWinSize = 60
+
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-yaml', 'coc-go', 'coc-html', 'coc-docker'] 
 
 " airline theme Section
 colo minimalist
