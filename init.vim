@@ -10,6 +10,7 @@
 :set softtabstop=4
 :set expandtab
 :set mouse=a
+
 call plug#begin()
 
 
@@ -21,16 +22,22 @@ Plug 'https://github.com/ryanoasis/vim-devicons'
 Plug 'https://github.com/rafi/awesome-vim-colorschemes'
 Plug 'https://github.com/Xuyuanp/nerdtree-git-plugin'
 Plug 'https://github.com/github/copilot.vim'
-Plug 'https://github.com/vv9k/vim-github-dark'
 Plug 'https://github.com/hashivim/vim-terraform'
 Plug 'https://github.com/tpope/vim-dotenv'
+Plug 'https://github.com/vim-syntastic/syntastic'
+Plug 'https://github.com/towolf/vim-helm'
 
 
 call plug#end()
 
-colorscheme ghdark
-
 let NERDTreeShowHidden=1
+
+" airline theme Section
+colo minimalist
+let g:airline_theme='minimalst'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_close_button = 1
 
 " Start NERDTree when Vim is started without file arguments.
 autocmd StdinReadPre * let s:std_in=1
